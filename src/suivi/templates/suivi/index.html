@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Series</title>
+  <link rel="stylesheet" href="{% static 'suivi/css/style.css' %}">
+  <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+</head>
+
+<p>Bienvenue {{ user.username }} </p>
+
+<body>
+  {% csrf_token %}
+  <h1>Liste de Séries</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Vue</th>
+        <th>Saisons</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for serie in series %}
+      <tr>
+        <td>
+          <input type="text" class="nom" value='{{ serie.name }}' readonly="readonly" style="width: 350px;"> 
+        </td>
+        <td>
+          <input type="text" class="vue" name="seen_seasons" value='{{ serie.seen_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
+        </td>
+        <td>
+          <input type="text" class="nbsaisons" name="number_of_seasons" value='{{ serie.number_of_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
