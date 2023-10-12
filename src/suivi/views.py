@@ -1,11 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_protect
-from typing import Any
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
-from django.template.loader import render_to_string
 from django.shortcuts import render, get_object_or_404
 from suivi.models import Serie
-from suivi.forms import SerieForm
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 

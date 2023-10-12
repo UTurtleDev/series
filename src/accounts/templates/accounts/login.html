@@ -7,36 +7,18 @@
   <link rel="stylesheet" href="{% static 'series/style.css' %}">
 </head>
 <body>
-  <h1>Page d'accueil</h1>
+  <h1>Connexion au suivi de séries</h1>
 
-<!--  <form class="login-form" method="post">-->
-<!--      {% csrf_token%}-->
-<!--      <div class="username-input" data-validate="username is required">-->
-<!--          <input class="username-input" type="text" placeholder="Username" name="username" required>-->
-<!--      </div>-->
-<!--      <div class="password-input" data-validate="Password is required">-->
-<!--          <input class="password-input" type="password" placeholder="Password" name="password" required>-->
-<!--      </div>-->
-<!--      <div class="sign-in">-->
-<!--          <button class="login-btn" type="submit">Connexion</button>-->
-<!--      </div>-->
-<!--  </form>-->
 
   {% for message in messages %}
-    <p>{{ message }}</p>
+    {{ message }}
   {% endfor %}
 
-  <form method="post">
+  <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Connexion">
   </form>
-
-
-
-
-
-
 
 </body>
 </html>
