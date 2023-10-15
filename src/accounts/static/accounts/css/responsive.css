@@ -1,0 +1,23 @@
+@media screen and (max-width: 900px) {
+    .form {
+        position: initial;
+        width: 100%;
+        align-items: center;
+        margin-top: 310px;
+    }
+
+    body {
+        background-size: auto;
+        background-position-x: -110px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-left: 0;
+    }
+
+    input.btn {
+        margin-left: 0;
+    }
+}
+
