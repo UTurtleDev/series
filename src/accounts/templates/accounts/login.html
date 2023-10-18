@@ -19,11 +19,11 @@
     <form method="POST">
       {% csrf_token %}
       {{ form.as_p }}
+      {% for message in messages %}
+      <p class="error">{{ message }}</p>  
+      {% endfor %}
       <input class="btn" type="submit" value="Connexion">
     </form>
-    {% for message in messages %}
-      {{ message }}
-    {% endfor %}
   </div>
 </body>
 </html>

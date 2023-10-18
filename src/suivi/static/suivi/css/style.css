@@ -1,4 +1,7 @@
 body {
-    background-color: #333;
-    color: #f1f1f1;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f1f1f1
 }
+    
