@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 
 def index(request):
-    return redirect(request, "accounts/login.html")
+    return render(request, "accounts/login.html")
