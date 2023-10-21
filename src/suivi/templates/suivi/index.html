@@ -5,37 +5,48 @@
   <meta charset="UTF-8">
   <title>Series</title>
   <link rel="stylesheet" href="{% static 'suivi/css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
 </head>
 
-<p>Bienvenue {{ user.username }} </p>
-
 <body>
-  {% csrf_token %}
-  <h1>Liste de Séries</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Nom</th>
-        <th>Vue</th>
-        <th>Saisons</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for serie in series %}
-      <tr>
-        <td>
-          <input type="text" class="nom" value='{{ serie.name }}' readonly="readonly" style="width: 350px;"> 
-        </td>
-        <td>
-          <input type="text" class="vue" name="seen_seasons" value='{{ serie.seen_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
-        </td>
-        <td>
-          <input type="text" class="nbsaisons" name="number_of_seasons" value='{{ serie.number_of_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <nav class="nav">
+    <p class="welcom nav-item" >Bienvenue {{ user.username }} </p>
+    {% csrf_token %}
+    <h1 class="nav-item" >Liste de Séries</h1>
+    <div class="navbtn nav-item">
+      <img src="../../static/suivi/img/logout.svg" alt="">
+      <img src="../../static/suivi/img/login.svg" alt="">
+      <img src="../../static/suivi/img/settings.svg" alt="">
+    </div>
+  </nav>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th class="name" >Nom</th>
+          <th class="viewed">Vue</th>
+          <th class="nb-saisons" >Saisons</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for serie in series %}
+        <tr>
+          <td>
+            <input type="text" class="name" value='{{ serie.name }}' readonly="readonly" style="width: 350px;">
+          </td>
+          <td>
+            <input type="text" class="viewed" name="seen_seasons" value='{{ serie.seen_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
+          </td>
+          <td>
+            <input type="text" class="nb-saisons" name="number_of_seasons" value='{{ serie.number_of_seasons }}' hx-post="{% url 'update_series' serie.id %}" hx-trigger="blur">
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
