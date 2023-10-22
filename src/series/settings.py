@@ -18,7 +18,7 @@ from environ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
-environ.Env.read_env(env_file=str(BASE_DIR / "suivi" / ".env"))
+environ.Env.read_env(env_file=str(BASE_DIR / "accounts" / ".env"))
 
 
 # Quick-start development settings - unsuitable for production
