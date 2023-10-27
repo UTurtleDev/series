@@ -11,7 +11,7 @@ body {
     overflow: hidden;
     background-image: url(../img/bg.jpg);
     background-size:cover;
-    background-position: cover;
+    /* background-position: cover; */
     background-repeat: no-repeat;
     position: relative;
 }

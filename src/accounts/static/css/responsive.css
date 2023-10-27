@@ -17,7 +17,7 @@
     }
 
     body {
-        background-image: url(../img/bg_petit.png);
+        background-image: url(../img/bg_petit.jpg);
         background-size: cover;
         background-position: center;
 
@@ -33,3 +33,23 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .form {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .form label {
+        font-size: 1.2rem;
+    }
+
+    .form input {
+        backdrop-filter: none;
+        background-color: #333;
+
+    }
+}
