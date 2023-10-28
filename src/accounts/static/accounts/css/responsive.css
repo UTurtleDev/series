@@ -36,15 +36,17 @@
 @media screen and (max-width: 500px) {
 
     body {
-        height: 100vh;
+        height: 110vh;
     }
     h1 {
         font-size: 3rem;
+        margin-bottom: 20px;
     }
 
     .form {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 257px;
     }
 
     .form label {
