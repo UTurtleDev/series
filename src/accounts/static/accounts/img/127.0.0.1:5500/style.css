@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Gluten', cursive;
+    font-weight: ;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.vertical {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.vertical p {
+    width: 20px;
+    text-align: center;
+    margin: 0;
+    margin-right: 50px;
+}
+
+
+.petit {
+    font-size: 20px;
+}
+
+.moyen {
+    font-size: 25px;
+}
+
+.grand {
+    font-size: 30px;
+}
+
+.tgrand {
+    font-size: 35px;
+}

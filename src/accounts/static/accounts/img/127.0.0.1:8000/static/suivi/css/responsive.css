@@ -1,0 +1,13 @@
+@media screen and (max-width: 1023px) {
+    .welcom.nav-item {
+        display: none;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav-item {
+        flex: 0 0 0;
+        margin-left: auto;
+    }
+
+}

@@ -32,8 +32,9 @@ h1 {
     width: 100%;
     padding: 10px;
     color: #eeb815;
+    white-space: nowrap;
     font-family: Creepster;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     text-shadow: 
     -5px -5px 10px #B50F08,
@@ -62,7 +63,6 @@ main{
     background-image: url("../img/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -90px;
     color: #f1f1f1;
 }
 
